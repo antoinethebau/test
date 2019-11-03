@@ -19,6 +19,7 @@ a{
 	list-style-stype: none;
 	text-align: right;
 	padding-left: 5px;
+	padding-top: 5px;
 }
 .menu>a{
 	color: #e8fcf5;
@@ -58,6 +59,7 @@ ul{
 	font-family: "Arial Black", Gadget, sans-serif;
 	padding: 10px 10px;
 	line-height: 180%;	
+	animation: quote 2000ms 0ms;
 }
 #grid{
     border: 1px solid white;
@@ -119,7 +121,7 @@ h2{
 	width:200px;
 	text-align:center;
 	color: green;
-	background-color: blue;
+	background-color: #a0f2d4;
 	border: solid 1px black;
 	border-radius: 15px;
 	position: absolute;
@@ -134,13 +136,14 @@ h2{
 	width:200px;
 	text-align:center;
 	color: green;
-	background-color: blue;
+	background-color: #a0f2d4;
 	border: solid 1px black;
 	border-radius: 15px;
 	font-size:25px;
 	position: absolute;
 	left:270px;
 	font-size:25px;
+	/*animation: roll 3s infinite;*/
 }
 #btnRotate:hover{
 	transition-duration: 1s;
@@ -175,5 +178,164 @@ input:hover {
 }
 .email input:not(:focus):not(:invalid){
 	border: 1px solid green;
-	background-color:green;
+	background-color:#a0f2d4;
+}
+#btn{
+	background-color:#a0f2d4;
+	position:absolute;
+	left:70px;
+	top:400px;
+	border-radius:5px;
+	padding:5px 5px;
+}
+#btn2{
+	background-color:#a0f2d4;
+	width: 80px;
+	border-radius:5px;
+	padding:5px 5px;
+	margin: 5px auto;
+	text-align:center;
+}
+#barre{
+	width:300px;
+	height:20px;
+	background-color: grey;
+	position: absolute;
+	left:70px;
+	top:450px;
+}
+#progress{
+	width:30px;
+	height:18px;
+	padding: 1px 1px;
+	background-color: #a0f2d4;
+	transition: transform 10s ease-in-out;
+}
+#barre:hover>#progress{
+	transform: translate(270px,0px);
+}
+input:checked{
+	margin-left: 25px;
+	border: 1px solid white;
+	background-color: grey;	
+	color:  white;
+}
+.imageBox{
+	width:200px;
+	margin : 20px 20px;
+	padding: 20px 20px;
+	display: inline-block;
+	border: 1px solid #e38c64;
+	border-radius: 15px;
+}
+.imageBox>p{
+	background-color: #3146bd;
+	border-radius: 10px;
+	padding:5px;
+}
+.imagesBox{
+	text-align: center;
+}
+
+#btn2:active{
+	transform: translateX(108px);
+	transition: transform 700ms;
+	overflow: hidden;
+}
+
+@keyframes quote {
+    0% {
+        transform: translateX(-1000px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+#spin{
+	height:10px;
+	width:10px;
+	background-color:#a0f2d4;
+	display: inline-block;
+	animation: spin 3s infinite;
+	margin: 10px 10px;
+}
+#spin:hover{
+	animation-play-state: paused;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0turn);
+    }
+    100% {
+        transform: rotate(1turn);
+    }
+}
+.partieMenus{
+	display: inline-block;
+	position: absolute;
+	top:270px;
+	text-align:center;
+	margin: 0px 0px;
+}
+#partieMenus1{
+	left:115px;
+	animation: popup 2000ms 0ms;
+}
+#partieMenus2{
+	left:215px;
+	animation: popup 2500ms 0ms;
+}
+#partieMenus3{
+	left:315px;
+	animation: popup 3000ms 0ms;
+}
+.newmenu1{
+	display: none;
+	width:85px;
+	background-color: #4287f5;
+	border:solid 1px white;
+	
+}
+#partieMenus1:hover .newmenu1{
+	display: block;
+	opacity:0.85;
+}
+.newmenu2{
+	display: none;
+	width:85px;
+	background-color: #4287f5;
+	border:solid 1px white;
+}
+#partieMenus2:hover .newmenu2{
+	display: block;
+	opacity:0.85;
+}.newmenu3{
+	display: none;
+	width:85px;
+	background-color: #4287f5;
+	border:solid 1px white;
+}
+#partieMenus3:hover .newmenu3{
+	display: block;
+	opacity:0.85;
+}
+.partieMenus>p{
+	border:solid 1px white;
+	padding: 5px 5px;
+	background-color: #4287f5;
+	color: #001f52;
+}
+#newMenusBox a{
+	background-color: #4287f5;
+	color: #001f52;
+	padding: 0px 0px;
+	margin: 0px 0px;
+	width:50px;
+}
+#newMenusBox a:hover{
+	color: white;
+}
+@keyframes popup {
+  from { transform: scale(0.5); }
+  to   { transform: scale(1); }
 }
