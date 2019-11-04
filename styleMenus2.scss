@@ -1,0 +1,78 @@
+$primary-color: #8ab7ff;
+$secondary-color: #16243b;
+
+.boxmenu2{
+	display: inline-block;
+	width: 700px;
+	height: 400px;
+	margin: 10px 10px;
+	padding: 10px 10px;
+	background-color: $primary-color;
+}
+.text{
+	width:550px;
+	text-align: justify;
+	position: relative;
+	top:-390px;
+	left: 120px;
+	z-index:1;
+}
+.menuBox{
+	width: 100px;
+	height: 380px;
+	background-color: $secondary-color;
+	text-align: center;
+	border: 1px solid white;
+}
+.menuSimple, .categorie{
+	padding: 10px 0px;
+}
+.elementsBox{
+	visibility: hidden;
+	background-color: $secondary-color;
+	position: relative;
+	opacity: 0.85;
+	top: -20px;
+	left:100px;
+	z-index: 2;
+	border: 1px solid white;
+}
+.categorie1:hover .elementsBox{
+	visibility: visible;
+}
+.categorie2:hover .elementsBox{
+	visibility: visible;
+}
+.categorie3:hover .elementsBox{
+	visibility: visible;
+}
+.categorie1{
+		animation: slidein 1500ms 0ms;
+}
+.categorie2{
+	position: relative;
+	top: -40px;
+		animation: slidein 2000ms 0ms;
+}
+.categorie3{
+	position: relative;
+	top: -100px;
+		animation: slidein 2500ms 0ms;
+}
+.menuSimple2{
+	position: relative;
+	top: -120px;
+}
+.previous{
+	position: relative;
+	top:-150px;
+	left: -700px;
+}
+@keyframes slidein {
+    0% {
+        transform: translateX(-100px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
